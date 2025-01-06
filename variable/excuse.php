@@ -29,9 +29,9 @@
         <p>Raison :</p> <br>
         <label for="reasons">
         <input type="radio" id="reason-illness" name="reason" value="illness"><p>Maladie</p><br>
-            <input type="radio" id="reason-death" name="reason" value="death"><p>Décès dans la famille</p><br>
-            <input type="radio" id="reason-extra-activity" name="reason" value="extra-activity"><p>Activité extra scolaire prioritaire</p><br>
-            <input type="radio" id="reason-other" name="reason" value="other"><p>Autre :</p>
+        <input type="radio" id="reason-death" name="reason" value="death"><p>Décès dans la famille</p><br>
+        <input type="radio" id="reason-extra-activity" name="reason" value="extra-activity"><p>Activité extra scolaire prioritaire</p><br>
+        <input type="radio" id="reason-other" name="reason" value="other"><p>Autre :</p>
         <input type="text" name="other" id="other"><br>
         </label>
         <input type="submit" id="button" value="Générer">
@@ -95,5 +95,7 @@ if(isset($_GET["name"], $_GET["gender"], $_GET["prof"], $_GET["duration"], $_GET
     }
 }
 ?>
+
+
 
 
