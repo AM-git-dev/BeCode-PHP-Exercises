@@ -1,0 +1,29 @@
+label, select, input{
+    width: 150px;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+
+}
+td{
+    border: 3px black solid;
+    width: fit-content;
+    padding: 20px 20px;
+    text-align: center;
+    background: grey;
+}
+
+input {
+    width: fit-content;
+}
+

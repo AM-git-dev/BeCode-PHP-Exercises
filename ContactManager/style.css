@@ -1,0 +1,46 @@
+body {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+    padding: 0;
+}
+
+h2{
+    margin-top: 0;
+}
+
+.createcontact {
+    border: 1px black solid;
+    border-radius: 25px;
+    width: 40%;
+    padding: 15px 15px;
+
+    #valider {
+        margin-left : 49%;
+    }
+}
+
+.containercreateandlist {
+    display: flex;
+    justify-content: space-evenly;
+
+    .contactlist {
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 25px;
+        width: 40%;
+        padding: 5px 5px;
+        td{
+            height: fit-content;
+        }
+
+
+    }
+}
