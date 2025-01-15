@@ -15,7 +15,6 @@ $results= $data->fetchAll();
     <link rel="stylesheet" href=css/basics.css media="screen" title="no title" charset="utf-8">
   </head>
   <body>
-
     <h1>Liste des randonnées</h1>
     <table>
      <thead>
@@ -25,6 +24,7 @@ $results= $data->fetchAll();
          <td class="data">DISTANCE (en m)</td>
          <td class="data">DUREE</td>
          <td class="data">DENIVELE</td>
+         <td class="delete">SUPPRIMER</td>
      </tr>
      </thead>
         <tbody>
@@ -35,6 +35,7 @@ $results= $data->fetchAll();
             echo "<td class='data'>" . $result["distance"] . "</td>";
             echo "<td class='data'>" . $result["duration"] . "</td>";
             echo "<td class='data'>" . $result["height_difference"] . "</td>";
+            echo "<td class='delete'><button><a href='delete.php?id=" . $result['id'] . "'>Supprimer</a></button></td>";
             echo "</tr>";
         } ?>
         </tbody>

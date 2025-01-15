@@ -8,10 +8,17 @@ $statement = $bdd->prepare('SELECT * FROM hiking WHERE id = :id');
 $statement -> execute(array('id' => $id));
 $hiking = $statement -> fetch();
 
-echo '<pre>';
-print_r($hiking);
-echo '</pre>';
+if (isset($_POST['button'])) {
+    $name = $_POST['name'];
+    $difficulty = $_POST['difficulty'];
+    $distance = $_POST['distance'];
+    $duration = $_POST['duration'];
+    $height_difference = $_POST['height_difference'];
 
+    $query = $bdd -> prepare('UPDATE hiking SET name = :name, difficulty = :difficulty, distance = :distance, duration = :duration, height_difference= :height_difference WHERE id = :id');
+    $query -> execute(array('name' => $name, 'difficulty' => $difficulty, 'distance' => $distance, 'duration' => $duration, 'height_difference' => $height_difference, 'id' => $id));
+    header('location: read.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +31,7 @@ echo '</pre>';
 <body>
 	<a href=read.php>Liste des données</a>
 	<h1>Modifier</h1>
-	<form action="read.php" method="post">
+	<form action="" method="post">
 		<div>
 			<label for="name">Name</label>
 			<input style="width: 350px; text-align: left" type="text" name="name" value="<?= $hiking['name'] ?>">
