@@ -1,5 +1,5 @@
 <?php
-$bdd = new PDO('mysql:host=localhost;dbname=reunion', 'root', '0000');
+$bdd = new PDO('mysql:host=localhost;dbname=reunion', 'root', '0000', array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
 
 
 if (isset($_POST['button'])) {
@@ -20,7 +20,7 @@ if (isset($_POST['button'])) {
 }
 ?>
 
- html>
+
 <html>
 <head>
 	<meta charset="utf-8">
